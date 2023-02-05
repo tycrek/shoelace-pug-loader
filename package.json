@@ -1,6 +1,6 @@
 {
 	"name": "shoelace-pug-loader",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "A Pug Mixin for easily loading Shoelace Web Components.",
 	"author": "tycrek <t@tycrek.com> (https://tycrek.com)",
 	"scripts": {
