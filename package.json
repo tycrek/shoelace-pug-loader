@@ -1,0 +1,31 @@
+{
+	"name": "shoelace-pug-loader",
+	"version": "0.0.0",
+	"description": "A Pug Mixin for easily loading Shoelace Web Components.",
+	"author": "tycrek <t@tycrek.com> (https://tycrek.com)",
+	"scripts": {
+		"test": "echo \"Testing not necessary.\" && exit 0",
+		"release": "np"
+	},
+	"files": [
+		"loader.pug"
+	],
+	"main": "loader.pug",
+	"repository": "github:tycrek/shoelace-pug-loader",
+	"homepage": "https://github.com/tycrek/shoelace-pug-loader#readme",
+	"bugs": "https://github.com/tycrek/shoelace-pug-loader/issues",
+	"keywords": [
+		"shoelace",
+		"pug",
+		"pug-mixin",
+		"web-components",
+		"loader"
+	],
+	"license": "ISC",
+	"publishConfig": {
+		"access": "public"
+	},
+	"dependencies": {
+		"pug": "^3.0.2"
+	}
+}
