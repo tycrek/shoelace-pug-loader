@@ -1,0 +1,27 @@
+-
+	const SLCDN = {
+		URL: 'https://cdn.jsdelivr.net/',
+		DIST: 'npm/@shoelace-style/shoelace@2/dist',
+	};
+
+//- Load theme (default: dark). This mixin is required at least once.
+mixin slTheme(name='dark')
+	link(rel='stylesheet' href=`${SLCDN.URL}${SLCDN.DIST}/themes/${name}.css`)
+
+//- Load a single component
+mixin slComponent(name)
+	script(type='module' src=`${SLCDN.URL}${SLCDN.DIST}/components/${name}/${name}.js`)
+
+//- Load multiple components
+mixin slComponents(...names)
+	each name in names
+		+slComponent(name)
+
+//- jsDelivr combine example: <script src="https://cdn.jsdelivr.net/combine/npm/@shoelace-style/shoelace@2/dist/components/popup/popup.min.js,npm/@shoelace-style/shoelace@2/dist/components/textarea/textarea.min.js,npm/@shoelace-style/shoelace@2/dist/components/tab/tab.min.js"></script>
+mixin slCombine(...names)
+	- var url = SLCDN.URL.concat('combine/').concat(names.map((name) => `${SLCDN.DIST}/components/${name}/${name}.min.js`).join(','));
+	script(src=url type='module')
+
+//- Load all components. This is not recommended for production.
+mixin slAllComponents
+	script(type='module' src=`${SLCDN.URL}${SLCDN.DIST}/shoelace.js`)
