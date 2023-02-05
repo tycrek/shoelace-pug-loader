@@ -6,7 +6,7 @@
 
 //- Load theme (default: dark). This mixin is required at least once.
 mixin slTheme(name='dark')
-	link(rel='stylesheet' href=`${SLCDN.URL}${SLCDN.DIST}/themes/${name}.css`)
+	link(rel='stylesheet' href=`${SLCDN.URL}${SLCDN.DIST}/themes/${name}.min.css`)
 
 //- Load a single component
 mixin slComponent(name)
@@ -19,4 +19,4 @@ mixin slComponents(...names)
 
 //- Load all components. This is not recommended for production.
 mixin slAllComponents
-	script(type='module' src=`${SLCDN.URL}${SLCDN.DIST}/shoelace.js`)
+	script(type='module' src=`${SLCDN.URL}${SLCDN.DIST}/shoelace.min.js`)
