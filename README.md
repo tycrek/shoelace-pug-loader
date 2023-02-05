@@ -66,3 +66,21 @@ There are three ways to load components:
 //- ALL components at once (this is NOT recommended)
 +slAllComponents
 ```
+
+### Using components
+
+This mixin only **imports** the components. You still have to use them in your HTML.
+
+```pug
+html
+    head
+        +slTheme('dark')
+        +slComponents('icon-button', 'tooltip')
+    body
+        sl-tooltip(content='Open settings')
+            sl-button(name='gear' label='Settings')
+```
+
+## License
+
+**[ISC](LICENSE)**
