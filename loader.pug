@@ -10,7 +10,7 @@ mixin slTheme(name='dark')
 
 //- Load a single component
 mixin slComponent(name)
-	script(type='module' src=`${SLCDN.URL}${SLCDN.DIST}/components/${name}/${name}.js`)
+	script(type='module' src=`${SLCDN.URL}${SLCDN.DIST}/components/${name}/${name}.min.js`)
 
 //- Load multiple components
 mixin slComponents(...names)
