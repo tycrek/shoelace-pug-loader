@@ -78,7 +78,7 @@ html
         +slComponents('icon-button', 'tooltip')
     body
         sl-tooltip(content='Open settings')
-            sl-button(name='gear' label='Settings')
+            sl-icon-button(name='gear' label='Settings')
 ```
 
 ## License
