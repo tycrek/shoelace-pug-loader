@@ -53,7 +53,7 @@ html
 
 ### Loading components
 
-There are three ways to load components:
+There are four ways to load components:
 
 ```pug
 //- One at a time
@@ -62,6 +62,9 @@ There are three ways to load components:
 
 //- Multiple at once (note the plural form)
 +slComponents('button', 'icon')
+
+//- Automatically
++slAuto
 
 //- ALL components at once (this is NOT recommended)
 +slAllComponents
